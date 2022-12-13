@@ -1,16 +1,13 @@
 import * as Font from "expo-font";
-import * as SplashScreen from 'expo-splash-screen';
-import { Text, View } from "react-native";
+import * as SplashScreen from "expo-splash-screen";
+import {  ScrollView} from "react-native";
 import { useEffect, useCallback } from "react";
+import Dasboard from "./screens/Dasboard";
 
 export default function App() {
   const [fontsLoaded] = Font.useFonts({
-    "Inter-Black": require("./assets/fonts/Inter-Black.otf"),
     "Lato-Bold": require("./assets/fonts/Lato-Bold.ttf"),
-    "Lato-Regular": require("./assets/fonts/Lato-Bold.ttf"),
-
-    "Inter-SemiBoldItalic":
-      "https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12",
+    "Lato-Regular": require("./assets/fonts/Lato-Regular.ttf"),
   });
 
   useEffect(() => {
@@ -28,18 +25,13 @@ export default function App() {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
+    console.log('Fonts Notloaded')
     return null;
   }
 
   return (
-    <View 
-      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-      onLayout={onLayoutRootView}>
-      <Text>Platform Default</Text>
-      <Text style={{ fontFamily: "Inter-Black" }}>Inter Black</Text>
-      <Text style={{ fontFamily: "Inter-SemiBoldItalic" }}>
-        Inter SemiBoldItalic
-      </Text>
-    </View>
+    <ScrollView onLayout={onLayoutRootView}>
+      <Dasboard/>
+    </ScrollView>
   );
 }

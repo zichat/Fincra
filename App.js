@@ -1,8 +1,9 @@
 import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import {  ScrollView} from "react-native";
+import { ScrollView } from "react-native";
 import { useEffect, useCallback } from "react";
 import Dasboard from "./screens/Dasboard";
+import TransferScreen from "./screens/TransferScreen";
 
 export default function App() {
   const [fontsLoaded] = Font.useFonts({
@@ -25,13 +26,16 @@ export default function App() {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
-    console.log('Fonts Notloaded')
+    console.log("Fonts Notloaded");
     return null;
   }
 
   return (
-    <ScrollView onLayout={onLayoutRootView}>
-      <Dasboard/>
+    <ScrollView
+      onLayout={onLayoutRootView}
+      showsVerticalScrollIndicator={false}
+    >
+      <TransferScreen />
     </ScrollView>
   );
 }

@@ -4,6 +4,7 @@ export default {
     'normalFontSize':16,
     'meduimFontSize':18,
     'largeFontSize':20,
+    'xLargeFontSize':24,
     'currentBalance': 38,
     
 }

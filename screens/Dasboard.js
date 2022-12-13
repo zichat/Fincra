@@ -7,6 +7,7 @@ import SIZES from "../constants/SIZES";
 import Wallet from "../components/Dasboard/Wallet";
 import CardList from "../components/Dasboard/CardList";
 import FONTS from "../constants/FONTS";
+import TransactionList from "../components/Dasboard/TransactionList";
 
 const Dasboard = () => {
   return (
@@ -69,15 +70,51 @@ const Dasboard = () => {
       <CardList />
       {/* CardList */}
 
-      {/* Transactions Heading */}
-      <View style={{flexDirection:'row', alignItems: "center", justifyContent: 'space-between', marginTop: verticalScale(24)}}>
-        <Text style={{fontSize:moderateScale(SIZES.largeFontSize), fontFamily: FONTS.latoRegular}}>Transactions</Text>
-        <Text style={{fontSize:moderateScale(SIZES.normalFontSize), fontFamily: FONTS.latoRegular}}>View all</Text>
+      {/* Transactions Heading Start*/}
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginTop: verticalScale(24),
+        }}
+      >
+        <Text
+          style={{
+            fontSize: moderateScale(SIZES.largeFontSize),
+            fontFamily: FONTS.latoRegular,
+          }}
+        >
+          Transactions
+        </Text>
+        <TouchableOpacity>
+          <Text
+            style={{
+              fontSize: moderateScale(SIZES.normalFontSize),
+              fontFamily: FONTS.latoRegular,
+            }}
+          >
+            View all
+          </Text>
+        </TouchableOpacity>
       </View>
 
-      <Text style={{fontSize:moderateScale(SIZES.smallFontSize), fontFamily: FONTS.latoRegular, color: COLORS.grey, marginTop: verticalScale(8)}}>Today</Text>
+      <Text
+        style={{
+          fontSize: moderateScale(SIZES.smallFontSize),
+          fontFamily: FONTS.latoRegular,
+          color: COLORS.grey,
+          marginTop: verticalScale(8),
+          marginBottom: verticalScale(12)
+        }}
+      >
+        Today
+      </Text>
+      {/* Transactions Heading End */}
 
-      {/* Transactions Heading */}
+      {/* Transaction Lists start*/}
+        <TransactionList/>
+      {/* Transaction Lists End*/}
     </View>
   );
 };

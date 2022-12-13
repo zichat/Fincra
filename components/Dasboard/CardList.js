@@ -5,7 +5,6 @@ import { scale, verticalScale, moderateScale } from "react-native-size-matters";
 import COLORS from "../../constants/COLORS";
 import FONTS from "../../constants/FONTS";
 import SIZES from "../../constants/SIZES";
-const windowWidth = Dimensions.get("window").width;
 
 const CardList = () => {
   const cards = [
@@ -44,7 +43,7 @@ const CardList = () => {
         />
         <View style={{marginHorizontal:moderateScale(16), justifyContent:'center',}}>
           <Text style={{fontFamily: FONTS.latoBold, fontSize: moderateScale(SIZES.normalFontSize)}}>{card.amount}</Text>
-          <Text style={{fontFamily: FONTS.latoRegular, fontSize:moderateScale(SIZES.normalFontSize), color: COLORS.grey}}>{card.name}</Text>
+          <Text style={{fontFamily: FONTS.latoRegular, fontSize:moderateScale(SIZES.normalFontSize), color: COLORS.grey, marginVertical: verticalScale(4)}}>{card.name}</Text>
         </View>
       </View>
 

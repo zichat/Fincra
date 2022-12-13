@@ -6,6 +6,7 @@ import COLORS from "../constants/COLORS";
 import SIZES from "../constants/SIZES";
 import Wallet from "../components/Dasboard/Wallet";
 import CardList from "../components/Dasboard/CardList";
+import FONTS from "../constants/FONTS";
 
 const Dasboard = () => {
   return (
@@ -20,7 +21,7 @@ const Dasboard = () => {
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
         <Text
           style={{
-            fontFamily: "Lato-Regular",
+            fontFamily: FONTS.latoRegular,
             fontSize: moderateScale(SIZES.normalFontSize),
           }}
         >
@@ -65,10 +66,18 @@ const Dasboard = () => {
       {/* Your cards */}
 
       {/* CardList */}
-
-      <CardList/>
-
+      <CardList />
       {/* CardList */}
+
+      {/* Transactions Heading */}
+      <View style={{flexDirection:'row', alignItems: "center", justifyContent: 'space-between', marginTop: verticalScale(24)}}>
+        <Text style={{fontSize:moderateScale(SIZES.largeFontSize), fontFamily: FONTS.latoRegular}}>Transactions</Text>
+        <Text style={{fontSize:moderateScale(SIZES.normalFontSize), fontFamily: FONTS.latoRegular}}>View all</Text>
+      </View>
+
+      <Text style={{fontSize:moderateScale(SIZES.smallFontSize), fontFamily: FONTS.latoRegular, color: COLORS.grey, marginTop: verticalScale(8)}}>Today</Text>
+
+      {/* Transactions Heading */}
     </View>
   );
 };

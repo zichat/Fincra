@@ -3,6 +3,8 @@ import React from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { scale, verticalScale, moderateScale } from "react-native-size-matters";
 import COLORS from "../../constants/COLORS";
+import FONTS from "../../constants/FONTS";
+import SIZES from "../../constants/SIZES";
 const windowWidth = Dimensions.get("window").width;
 
 const CardList = () => {
@@ -41,8 +43,8 @@ const CardList = () => {
           height={verticalScale(40)}
         />
         <View style={{marginHorizontal:moderateScale(16), justifyContent:'center',}}>
-          <Text style={{fontFamily: 'Lato-Bold', fontSize: moderateScale(16)}}>{card.amount}</Text>
-          <Text style={{fontFamily: 'Lato-Regular', fontSize:moderateScale(16), color: COLORS.grey}}>{card.name}</Text>
+          <Text style={{fontFamily: FONTS.latoBold, fontSize: moderateScale(SIZES.normalFontSize)}}>{card.amount}</Text>
+          <Text style={{fontFamily: FONTS.latoRegular, fontSize:moderateScale(SIZES.normalFontSize), color: COLORS.grey}}>{card.name}</Text>
         </View>
       </View>
 

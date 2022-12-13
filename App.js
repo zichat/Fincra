@@ -6,6 +6,9 @@ import { useEffect, useCallback } from "react";
 export default function App() {
   const [fontsLoaded] = Font.useFonts({
     "Inter-Black": require("./assets/fonts/Inter-Black.otf"),
+    "Lato-Bold": require("./assets/fonts/Lato-Bold.ttf"),
+    "Lato-Regular": require("./assets/fonts/Lato-Bold.ttf"),
+
     "Inter-SemiBoldItalic":
       "https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12",
   });

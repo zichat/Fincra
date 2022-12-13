@@ -5,6 +5,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import COLORS from "../constants/COLORS";
 import SIZES from "../constants/SIZES";
 import Wallet from "../components/Dasboard/Wallet";
+import CardList from "../components/Dasboard/CardList";
 
 const Dasboard = () => {
   return (
@@ -47,10 +48,27 @@ const Dasboard = () => {
       {/* Current Balance */}
 
       {/* Wallet */}
-      <Wallet/>
+      <Wallet />
       {/* Wallet */}
 
-      
+      {/* Your Card Text */}
+      <View>
+        <Text
+          style={{
+            fontFamily: "Lato-Regular",
+            fontSize: moderateScale(SIZES.normalFontSize),
+          }}
+        >
+          Your Cards
+        </Text>
+      </View>
+      {/* Your cards */}
+
+      {/* CardList */}
+
+      <CardList/>
+
+      {/* CardList */}
     </View>
   );
 };

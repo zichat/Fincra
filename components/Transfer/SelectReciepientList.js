@@ -60,7 +60,7 @@ const SelectReciepientList = () => {
       </View>
 
       {reciepients.map((reciepient) => (
-        <TouchableOpacity>
+        <TouchableOpacity key={reciepient.id}>
           <View
             style={{ alignItems: "center", marginRight: moderateScale(34) }}
           >

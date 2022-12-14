@@ -14,7 +14,8 @@ const PrimaryButton = ({ text }) => {
         justifyContent: "center",
         paddingVertical: moderateScale(18),
         borderRadius: moderateScale(16),
-        marginTop: verticalScale(78)
+        marginTop: verticalScale(78),
+        marginBottom: verticalScale(100)
         
 
       }}

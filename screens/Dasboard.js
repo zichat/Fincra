@@ -8,14 +8,15 @@ import Wallet from "../components/Dasboard/Wallet";
 import CardList from "../components/Dasboard/CardList";
 import FONTS from "../constants/FONTS";
 import TransactionList from "../components/Dasboard/TransactionList";
+import { ScrollView } from "react-native";
 
 const Dasboard = () => {
   return (
-    <View
+    <ScrollView
       style={{
         marginTop: verticalScale(45),
-        paddingHorizontal: scale(20),
         paddingVertical: moderateScale(5),
+        paddingHorizontal: moderateScale(15)
       }}
     >
       {/* TopMost Bar  */}
@@ -115,7 +116,7 @@ const Dasboard = () => {
       {/* Transaction Lists start*/}
         <TransactionList/>
       {/* Transaction Lists End*/}
-    </View>
+    </ScrollView>
   );
 };
 

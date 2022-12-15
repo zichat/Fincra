@@ -40,7 +40,7 @@ export default function App() {
   }
 
   return (
-    <NavigationContainer>
+    <NavigationContainer onReady={onLayoutRootView}>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           headerShown: false,
@@ -72,15 +72,5 @@ export default function App() {
     </NavigationContainer>
   );
 
-  return (
-    <SafeAreaView
-      onLayout={onLayoutRootView}
-      showsVerticalScrollIndicator={false}
-      style={{
-        paddingHorizontal: scale(20),
-      }}
-    >
-      <TransferScreen />
-    </SafeAreaView>
-  );
+ 
 }

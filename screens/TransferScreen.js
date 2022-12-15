@@ -16,7 +16,7 @@ const TransferScreen = () => {
     <View
       style={{
         paddingVertical: moderateScale(5),
-        marginHorizontal: moderateScale(15),
+        paddingHorizontal: moderateScale(15),
       }}
     >
       {/* Heading start */}

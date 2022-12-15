@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import COLORS from "./constants/COLORS";
 import { SafeAreaView, View } from "react-native";
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { StatusBar } from 'expo-status-bar';
 
 
 const Tab = createBottomTabNavigator();
@@ -41,6 +42,7 @@ export default function App() {
 
   return (
     <NavigationContainer onReady={onLayoutRootView}>
+      <StatusBar style="dark"/>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           headerShown: false,
